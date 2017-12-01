@@ -5,7 +5,11 @@ class LaughTracksApp < Sinatra::Base
   end
 
   get '/comedians' do
+    @comedians = Comedian.all
     erb :comedians
-  end 
+  end
 
+  # post '/comedians' do
+  #   @comedians = params[:specials]
+  # end
 end
